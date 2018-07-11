@@ -1,0 +1,158 @@
+$p_20:20px;
+html{ font-size:72%;}
+body{
+  font-size:12px;
+  font-size:1.2rem;
+  background:white;
+  margin: 0;
+  img{
+    width:100%;
+}
+  .mb_20{
+    margin-bottom:$p_20;
+}
+  .mb_10{
+    margin-bottom:$p_20/2;
+}
+  .mt_20{
+    margin-top:$p_20;
+}
+  .m_20_0{
+    margin:$p_20 0;
+}
+  .m_10_0{
+    margin:$p_20/2 0;
+}
+  .t_a{
+    text-align:center;
+}
+  .t_r{
+    text-align:right;
+}
+  .t_l{
+    text-align:left;
+}
+  .d_i{
+    display:inline-block;
+}
+  .p_r{
+    position:relative;
+}
+  .top_title{
+    border-bottom:2px solid #487C20;
+}
+  .d_form{
+    padding:5px 0 10px 0;
+    //margin:10px;
+    border-radius:5px;
+    border:2px solid #ADCB94;
+}
+  .detail{
+    .d_form{
+      padding:10px;
+      margin: 10px 0;
+  }
+    table{
+      border: none;
+      margin: 0;
+  }
+}
+  table.el-table__body{
+    margin: 0;
+}
+}
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #606266!important;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    #606266!important;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    #606266!important;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color:    #606266!important;
+}
+
+.el-table .cell {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: normal;
+  word-break: unset;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: initial;
+  overflow: auto;
+  width: fit-content;
+  padding:0 3px;
+  font-size: 0.9rem;
+  width:100%;
+  text-align:center;
+}
+.el-table th.is-leaf{
+  background-color: #f5f7ef;
+}
+.el-table td, .el-table th {
+  padding: 5px 0;
+}
+.el-tabs--border-card>.el-tabs__content{
+  padding: 5px;
+}
+.el-input__inner{
+  font-size: 15px;
+  border: 1px solid #cecdcd;
+  color:#525252;
+}
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: #333;
+  background-color: #e0e0e0;
+}
+.el-select .el-input__inner:focus{
+  border-color: #cecdcd;
+}
+.el-select-dropdown__item.selected {
+  color: #333;
+  background-color: #f5f5f5;
+  font-weight: normal;
+}
+.el-table th>.cell{
+  color:#333;
+  font-weight: normal;
+}
+.el-pagination.is-background.el-pagination--small .btn-next, .el-pagination.is-background.el-pagination--small .btn-prev, .el-pagination.is-background.el-pagination--small .el-pager li {
+  margin: 0;
+  min-width: 26px;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+  margin: 10px 5px;
+  background-color: #fff;
+  color: #606266;
+  min-width: 30px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 0;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active{
+  border-color: #3a8ee6;
+}
+.el-pagination--small .btn-next, .el-pagination--small .btn-prev, .el-pagination--small .el-pager li, .el-pagination--small .el-pager li:last-child{
+  height: 28px;
+  line-height: 28px;
+}
+.el-pagination.is-background.el-pagination--small .btn-prev{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.el-pagination.is-background.el-pagination--small .btn-next{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-right: 1px solid #ccc;
+
+}
+.el-radio__input.is-checked+.el-radio__label{
+  color: #333;
+}
+.el-radio__input.is-checked .el-radio__inner{
+  border-color: #333;
+  background: #333;
+}
