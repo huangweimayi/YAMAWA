@@ -216,11 +216,11 @@
         let through = '', blind = '';
         if (typeHole) {
           if (typeHole == 'through_hole') {
-            through = 'o';
-            blind = '-';
+            through = '○';
+            blind = '';
           } else {
-            through = '-';
-            blind = 'o';
+            through = '';
+            blind = '○';
           }
         }
         let data = {
@@ -234,6 +234,12 @@
           'data[pitch]': _t.search.pitch,//牙距牙数
           'data[product_code]': _t.search.product_code,//产品代号
         };
+        if(!through){
+          delete data['data[through_hole]']
+        }
+        if(!blind){
+          delete data['data[blind_hole]']
+        }
         api.luowen(data).then(res => {
           let getArr = [];
           switch (type) {
@@ -247,7 +253,7 @@
               _t.options1 = getArr;
               break;
             case 'spec':
-              getArr.push({name: 'JIS', value: ''});
+              getArr.push({name: '构型规格', value: ''});
               for (let i = 0; i < res.data.length; i++) {
                 getArr.push({name: res.data[i].spec, value: res.data[i].spec})
               }
@@ -296,11 +302,11 @@
         let through = '', blind = '';
         if (typeHole) {
           if (typeHole == 'through_hole') {
-            through = 'o';
-            blind = '-';
+            through = '○';
+            blind = '';
           } else {
-            through = '-';
-            blind = 'o';
+            through = '';
+            blind = '○';
           }
         }
         let data = {
@@ -316,8 +322,16 @@
           product_code: _t.search.product_code,
           qie: _t.search.qie,
         };
+        if( !_t.search.qie ){
+          delete data.qie
+        }
+        if(!blind){
+          delete data.blind_hole
+        }
+        if(!through){
+          delete data.through_hole
+        }
         api.luowenlist(data).then(res => {
-          console.log(res);
           _t.total = res.total;
           _t.count = res.count;
           _t.tableData = res.data;

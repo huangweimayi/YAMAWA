@@ -12,8 +12,8 @@ const api = {
   luowenlist(params) {
     return request({
       url: '/index/luowenlist',
-      method: 'POST',
-      data:params
+      method: 'GET',
+      params
     })
   },
   //螺丝攻详情

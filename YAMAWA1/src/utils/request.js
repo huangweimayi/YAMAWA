@@ -8,6 +8,8 @@ import { Message, MessageBox } from 'element-ui'
 const service = axios.create({
   timeout: 15000, // 请求超时时间,
   baseURL: process.env.NODE_ENV == 'development' ? 'http://211.149.169.201/index.php/index' : 'http://211.149.169.201/index.php/index', // api的base_url
+  // baseURL: process.env.NODE_ENV == 'development' ? 'http://weinxin.yamawa.biz/index.php/index' : 'http://weinxin.yamawa.biz/index.php/index', // api的base_url
+
 });
 
 // request拦截器

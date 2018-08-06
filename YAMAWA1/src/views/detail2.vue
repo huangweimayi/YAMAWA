@@ -16,6 +16,17 @@
           <input type="text" class="price_input t-r" v-model="price" readonly>
         </el-col>
       </el-row>-->
+      <el-row class="grey mb_20 lh_50">
+        <el-col :span="15" class="t_a left">
+          型録
+        </el-col>
+        <el-col :span="9" class="t_a">
+          <a :href="pdf" download>
+            pdf
+            <i class="el-icon-message p_r"></i>
+          </a>
+        </el-col>
+      </el-row>
       <el-row class="grey mb_20">
         <el-col :span="24" class="t_a left bb">
           构型
@@ -59,6 +70,7 @@
         nameData:{name:'DETAIL'},
         name:'',
         id:this.$route.query.id,
+        pdf:'',
         configuration:"",
         price:"",
         unit:"",
@@ -116,6 +128,7 @@
         let _t = this;
         api.yuanbanDetail({id:_t.id}).then(res => {
           _t.name = res.data.product_name;
+          _t.pdf = res.data.pdf;
           _t.configuration = res.data.configuration;
           _t.unit = res.data.unit;
           _t.price = 'JPY '+res.data.price;

@@ -175,7 +175,7 @@
           let getArr = [];
           switch (type) {
             case 'spec':
-              getArr.push({name: 'JIS', value: ''});
+              getArr.push({name: '构型规格', value: ''});
               for (let i = 0; i < res.data.length; i++) {
                 if (res.data[i].spec != '-') {
                   getArr.push({name: res.data[i].spec, value: res.data[i].spec})

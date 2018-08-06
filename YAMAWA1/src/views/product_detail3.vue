@@ -18,7 +18,7 @@
           :value="item.value">
         </el-option>
       </el-select>
-      <el-select v-model="search.processing_diamete" placeholder="最小加工径（mm）" @change="getList"  @focus="getZhuan('min_processing_diameter')">
+      <el-select v-model="search.min_processing_diameter" placeholder="最小加工径（mm）" @change="getList"  @focus="getZhuan('min_processing_diameter')">
         <el-option
           v-for="item in options2"
           :key="item.value"
@@ -67,7 +67,7 @@
       <el-table-column prop="thread_type" label="螺纹种类" width="250"></el-table-column>
       <el-table-column prop="blade_distance" label="刃部径(Dc)" width="100"></el-table-column>
       <el-table-column prop="pitch" label="牙距"></el-table-column>
-      <el-table-column prop="processing_diamete" label="最小加工径(mm)" width="130"></el-table-column>
+      <el-table-column prop="min_processing_diameter" label="最小加工径(mm)" width="130"></el-table-column>
       <el-table-column prop="length" label="全长(L)" width="100"></el-table-column>
     </el-table>
     <!--工具条-->
@@ -116,7 +116,7 @@
         search:{
           search:'',
           thread_type:'',//螺纹种类
-          processing_diamete:'',//最小加工径（mm）
+          min_processing_diameter:'',//最小加工径（mm）
           pitch:'',//牙距/牙数
           product_code:'',//产品代号,
         },
@@ -192,7 +192,7 @@
           page:_t.page,
           pageSize:_t.size,
           thread_type: _t.search.thread_type,
-          processing_diamete: _t.search.processing_diamete,
+          min_processing_diameter: _t.search.min_processing_diameter,
           pitch: _t.search.pitch,
           product_code: _t.search.product_code,
         };
